@@ -1,0 +1,7 @@
+spring:
+  application:
+    name: simple-server
+  datasource:
+    url: jdbc:mysql://localhost:3306/zhiyong
+    username: root
+    password: '123456'

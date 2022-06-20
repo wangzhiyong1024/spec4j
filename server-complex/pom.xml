@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>wang.zhiyong.spec4j</groupId>
+    <artifactId>spec4j-parent</artifactId>
+    <version>1.0-SNAPSHOT</version>
+    <relativePath>../pom.xml</relativePath>
+  </parent>
+
+  <artifactId>server-complex</artifactId>
+  <packaging>pom</packaging>
+  <version>1.0-SNAPSHOT</version>
+
+  <modules>
+    <module>complex-api</module>
+    <module>complex-common</module>
+    <module>complex-dao</module>
+    <module>complex-manager</module>
+    <module>complex-model</module>
+    <module>complex-service</module>
+    <module>complex-web-pc</module>
+    <module>complex-web</module>
+    <module>complex-web-wechat</module>
+  </modules>
+
+  <dependencyManagement>
+    <dependencies>
+      <dependency>
+        <groupId>wang.zhiyong.spec4j</groupId>
+        <artifactId>complex-api</artifactId>
+        <version>1.0-SNAPSHOT</version>
+      </dependency>
+      <dependency>
+        <groupId>wang.zhiyong.spec4j</groupId>
+        <artifactId>complex-common</artifactId>
+        <version>1.0-SNAPSHOT</version>
+      </dependency>
+      <dependency>
+        <groupId>wang.zhiyong.spec4j</groupId>
+        <artifactId>complex-dao</artifactId>
+        <version>1.0-SNAPSHOT</version>
+      </dependency>
+      <dependency>
+        <groupId>wang.zhiyong.spec4j</groupId>
+        <artifactId>complex-manager</artifactId>
+        <version>1.0-SNAPSHOT</version>
+      </dependency>
+      <dependency>
+        <groupId>wang.zhiyong.spec4j</groupId>
+        <artifactId>complex-model</artifactId>
+        <version>1.0-SNAPSHOT</version>
+      </dependency>
+      <dependency>
+        <groupId>wang.zhiyong.spec4j</groupId>
+        <artifactId>complex-service</artifactId>
+        <version>1.0-SNAPSHOT</version>
+      </dependency>
+      <dependency>
+        <groupId>wang.zhiyong.spec4j</groupId>
+        <artifactId>complex-web</artifactId>
+        <version>1.0-SNAPSHOT</version>
+      </dependency>
+    </dependencies>
+  </dependencyManagement>
+</project>
