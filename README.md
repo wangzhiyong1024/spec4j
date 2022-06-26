@@ -29,25 +29,25 @@ spec4j 指导你去构建一个合理的和可持续扩展业务的项目结构,
 所有包的创建规则要以业务开头: `{分层}.{业务}.[子业务],{子分层}`, 模型层中的子分层较多, 但不意味着所有的业务都需要 创建出完整的子分层, 如果业务量不大, 可以没有子分层,
 只需要保证类的规范即可, 所有的模型都可以有对应的行为, 即在类中增加方法, 领域模型需要包含具体的业务方法, 让和业务有关的方法全部集中到领域模型层
 
-| 分层               | 名称      | 作用                          | 依赖           |
-|:-----------------|---------|-----------------------------|--------------|
-| adapter          | 适配层     | 适配各个端的服务层, 如: 小程序, PC, 内部接口 | api, service |
-| api              | 接口层     | 定义业务接口                      | model        |
-| service          | 服务层     | 实现具体的业务操作                   | manager, api |
-| service-query    | 服务层-查询层 | 处理复杂查询业务的单独处理层              | service      |
-| service-command  | 服务层-命令层 | 处理复杂增删改业务的单独处理层             | service      |
-| manager          | 管理层     | 沉淀通用业务能力                    | dao          |
-| dao              | 数据层     | 访问数据库                       | model        |
-| model            | 模型层     | 所有的模型全部存放与此, 用于对外提供或内部调用    | common       |
-| model-event      | 模型层     | 事件类分层, 类以xxxEvent 结尾        | common       |
-| model-domain     | 模型层     | 领域模型分层, 可作为多层中的出入参          | common       |
-| model-query      | 模型层     | 服务层查询参数分层, 类以xxxQry 结尾      | common       |
-| model-command    | 模型层     | 服务层命令参数分层, 类以xxxCmd 结尾      | common       |
-| model-param      | 模型层     | 管理层参数类分层, 类以xxxParam 结尾     | common       |
-| model-dataobject | 模型层     | 数据层数据类分层, 类以xxxDO 结尾        | common       |
-| model-properties | 模型层     | 配置类分层, 类以xxxProperties 结尾   | common       |
-| model-enums      | 模型层     | 枚举类分层, 类以xxxEnum 结尾         | common       |
-| common           | 通用层     | 通用层, 存放通用功能, 工具类, 接口等       | 无            |
+| 分层               | 名称      | 作用                                     | 依赖           |
+|:-----------------|---------|----------------------------------------|--------------|
+| adapter          | 适配层     | 适配各个端的服务层, 如: 小程序, PC, 内部接口            | api, service |
+| api              | 接口层     | 定义业务接口                                 | model        |
+| service          | 服务层     | 实现具体的业务操作                              | manager, api |
+| service-query    | 服务层-查询层 | 处理复杂查询业务的单独处理层                         | service      |
+| service-command  | 服务层-命令层 | 处理复杂增删改业务的单独处理层                        | service      |
+| manager          | 管理层     | 沉淀通用业务能力, 此分层通过Controller提供给其他内部服务使用 | dao          |
+| dao              | 数据层     | 访问数据库                                  | model        |
+| model            | 模型层     | 所有的模型全部存放与此, 用于对外提供或内部调用               | common       |
+| model-event      | 模型层     | 事件类分层, 类以xxxEvent 结尾                   | common       |
+| model-domain     | 模型层     | 领域模型分层, 可作为多层中的出入参                     | common       |
+| model-query      | 模型层     | 服务层查询参数分层, 类以xxxQry 结尾                 | common       |
+| model-command    | 模型层     | 服务层命令参数分层, 类以xxxCmd 结尾                 | common       |
+| model-param      | 模型层     | 管理层参数类分层, 类以xxxParam 结尾                | common       |
+| model-dataobject | 模型层     | 数据层数据类分层, 类以xxxDO 结尾                   | common       |
+| model-properties | 模型层     | 配置类分层, 类以xxxProperties 结尾              | common       |
+| model-enums      | 模型层     | 枚举类分层, 类以xxxEnum 结尾                    | common       |
+| common           | 通用层     | 通用层, 存放通用功能, 工具类, 接口等                  | 无            |
 
 ![img.png](images/layer.png)
 
